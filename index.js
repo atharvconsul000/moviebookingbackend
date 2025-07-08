@@ -9,7 +9,16 @@ const userRouter = require('./route/user');
 require('dotenv').config();
 
 const app = express();
-app.use(cors());
+const allowedOrigins = [
+  'http://localhost:5500',  
+  'https://moviebookingfrontend.vercel.app'  
+];
+
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true
+}));
+
 
 console.log("hello");
 const MONGO_URI = process.env.MONGO_URI;
