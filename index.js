@@ -11,7 +11,8 @@ require('dotenv').config();
 const app = express();
 const allowedOrigins = [
   'http://localhost:5500',  
-  'https://moviebookingfrontend.vercel.app'  
+  'https://moviebookingfrontend.vercel.app', 
+  'https://moviebookingfrontend-git-main-atharv-consuls-projects.vercel.app/' 
 ];
 
 app.use(cors({
