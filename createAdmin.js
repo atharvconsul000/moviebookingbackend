@@ -10,7 +10,7 @@ async function createAdmin() {
 
     const existing = await User.findOne({ email });
     if (existing) {
-      console.log("⚠️ Admin already exists.");
+      console.log(" Admin already exists.");
     }
 
     const hashedPassword = await bcrypt.hash("7226", 10);
@@ -22,10 +22,10 @@ async function createAdmin() {
     });
 
     await admin.save();
-    console.log("✅ Admin created successfully.");
+    console.log(" Admin created successfully.");
     process.exit();
   } catch (err) {
-    console.error("❌ Error creating admin:", err.message);
+    console.error(" Error creating admin:", err.message);
     process.exit(1);
   }
 }
